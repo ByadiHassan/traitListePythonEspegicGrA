@@ -27,7 +27,12 @@ def triCroissantV1(items):
     items.sort()
 
 
-
+def getMax(liste):
+    max=liste[0]
+    for item in liste:
+        if item>max:
+            max=item
+    return max        
 '''
 def afficher(liste):
     for i in range(len(liste)):
