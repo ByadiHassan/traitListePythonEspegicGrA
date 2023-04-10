@@ -32,9 +32,40 @@ def getMax(liste):
     for item in liste:
         if item>max:
             max=item
-    return max        
+    return max      
+def getMin(liste):
+    min=liste[0]
+    for item in liste:
+        if item<max:
+            min=item
+    return min  
+def getAdmis(liste) :
+    admis=[]
+    for item in liste:
+        if item>=10:
+            admis.append(item)
+        
+    return admis
+def getMax(liste):
+    m=liste[0]
+    for i in range(1,len(liste)):
+        if liste[i]>m:
+            m=liste[i]
+    return m
+def getMin(liste):
+    m=liste[0]
+    for i in range(1,len(liste)):
+        if liste[i]<m:
+            m=liste[i]
+    return m
 '''
 def afficher(liste):
     for i in range(len(liste)):
         print(liste[i])
 '''
+if __name__=="__main__":
+    print("Je suis le module Traitement_Liste")
+    print("Test de la fonction getMax")
+    print("Max de [10,11,3,77,-4]est ",getMax([10,11,3,77,-4]))
+    print("Test de la fonction getMin")
+    print("Min de [10,11,3,77,-4]est ",getMin([10,11,3,77,-4]))
