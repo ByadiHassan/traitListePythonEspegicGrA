@@ -1,3 +1,4 @@
+import pickle
 def saisir(liste, nbr):
     for i in range(nbr):
         liste.append(float(input('Tapez la note num '+str(i+1)+ ' : ')))
@@ -58,6 +59,16 @@ def getMin(liste):
         if liste[i]<m:
             m=liste[i]
     return m
+def enregistrer(liste):
+    fichier=open('notes.bin','wb')
+    pickle.dump(liste,fichier)
+    fichier.close()
+def charger():
+    fichier=open('notes.bin','rb')
+    liste=pickle.load(fichier)
+    fichier.close()
+    return liste
+
 '''
 def afficher(liste):
     for i in range(len(liste)):

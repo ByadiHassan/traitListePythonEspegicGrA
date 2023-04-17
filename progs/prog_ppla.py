@@ -11,9 +11,11 @@ system("pause")
 notes=[]
 choix=0
 
-while choix!=9:
+while choix!=11:
     system("cls")
-    choix=int(input('1. Saisir\n2. Afficher\n3. Tri croissant\n4. Inverser le Tri\n5. Max\n6. Admis\n7. MAx\n8. Non Admis\n9. Quitter\nTapez votre choix ? '))
+    choix=int(input('1. Saisir\n2. Afficher\n3. Tri croissant\n4'
+    +'. Inverser le Tri\n5. Max\n6. Admis\n7. MAx\n8. Non Admis\n9'
+    +'. Enregistrer\n10. Charger\n11. Quitter\nTapez votre choix ? '))
    
     if choix==1:
         nbr= int(input('Combien de notes voulez vous traiter ?'))
@@ -47,4 +49,16 @@ while choix!=9:
         t.getMax(notes)
         
         system("pause")
-    
+    elif choix==8:
+        print("Liste des Admis :" )
+        t.afficherV(t.getNonAdmis(notes))
+        system("pause")
+        
+        system("pause")
+    elif choix==9:
+        t.enregistrer(notes)
+        
+    elif choix==10:
+        notes=t.charger()
+        t.afficherV(notes)   
+        system("pause")
